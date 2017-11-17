@@ -34,13 +34,14 @@ public class JdkIoBenchmark {
 	}
 	
 	private void initializeLinkedListCommonly() {
-		Random rand = new Random();
+        Random rand = new Random();
 		for (int i = 0; i < LIST_LENGTH; i++) {
             linkedList.add(rand.nextInt());
         }
 	}
 	
 	private void initializeLinkedListBadly() {
+        Random rand = new Random();
 		for (int i = 0; i < LIST_LENGTH; i++) {
             int pos = Math.abs(rand.nextInt()) % (LIST_LENGTH);
             linkedList.add(arrayList.get(pos));
